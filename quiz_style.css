@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    color: white;
+    padding-top: 5%;
+}
+
+#question {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: paleturquoise;
+    color: hotpink;
+    border: purple;
+    font-size: 30px;
+    min-width: 80%;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    border: gold 3px solid; 
+    background-color: pink;
+    color: blue;
+    border-radius: 5px;
+}
+
+.choice-prefix {
+    padding-left: 20px;
+    color: white;
+}
+
+.choice-text {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: red;
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 30px;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 200px;
+    height: 30px;
+    border: 3px gold solid;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background:gold;
+    width: 0%;
+}
+
+
+@media screen and (max-width: 400px){
+    .choice-container {
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .choice-container {
+        min-width: 700px;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .choice-container {
+        min-width: 1000px;
+    }
+}
