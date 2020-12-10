@@ -72,7 +72,7 @@ function updateTimerCountdown() {
     console.log(time);
     
     if(time <= 0) {
-        return window.location.assign('file:///Users/BheNot/Desktop/Week4_Homework/Quiz-Game/end_game.html');
+        return window.location.assign('end_game.html');
     }
 }
 
@@ -92,7 +92,7 @@ function getNewQuestion () {
     if(availableQuestions.length === 0 || questionCounter > numberOfQuestion) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('file:///Users/BheNot/Desktop/Week4_Homework/Quiz-Game/end_game.html')
+        return window.location.assign('end_game.html')
     }
 
     questionCounter++
