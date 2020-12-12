@@ -106,6 +106,12 @@ function getNewQuestion () {
 
     questionCounter++
 
+    if (questionCounter > 5) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign('end_game.html')
+    }
+
     progressText.innerText = ('Question ' + questionCounter + ' of ' + numberOfQuestion);
 
     progressBarFull.style.width = `${(questionCounter/numberOfQuestion) * 100}%`;

@@ -31,6 +31,6 @@ saveHighScore = e => {
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
 
-    windows.location.assign("/");ß
+    window.location.assign("index.html");
     
 }
