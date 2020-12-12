@@ -34,10 +34,12 @@ body {
 
 .correct {
     background: green;
+    color: gold;
 }
 
 .incorrect {
     background: red;
+    color: black;
 }
 
 #hud {

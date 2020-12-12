@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="end-container">
         <div id="end" class="flex-center flex-column">
             <h1 id="finalScore">0</h1>
 
@@ -18,11 +18,12 @@
                 
                 <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
             </form>
-
-            <a href="game2.html" class="btn">Play Again</a>
-            <a href="index.html" class="btn">Go Home</a>
-
         </div>
+
+            <a href="game2.html" class="btn" id='btn-play'>Play Again</a>
+            <a href="index.html" class="btn" id='btn-home'>Go Home</a>
+
+        
     </div>
     <script src="end_game.js"></script>
 </body>
