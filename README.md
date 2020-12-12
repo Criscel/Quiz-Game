@@ -1,9 +1,9 @@
 # Quiz Game
 This game consist of 5 multiple choice questions and must be answered within the time limit. I set the limit to 10 minutes for all the questions, the user will also get 10 points per correct answer. Every wrong answer, 3 minutes will be deducted on the remaining time.
 
-Once the timer reach 0 or the user finishes all the questions, a new page will turn-up with your final score. This page will allow you to save your name with your final score also, it can redirect you back to the Homepage or to start another quiz.
+Once the timer reaches 00:00 or the user finishes all the 5 questions, a new page will turn-up with your final score. This where  you will save your name with your final score also, it can also redirect you back to the Home Page or to start another quiz.
 
-Home page will give you an option to play another round or check the high scorers of the game
+Home page have 2 buttons that will either redirect the player to start the quiz or check the list of high scorers of the game.
 
 ## Installation
 
@@ -27,8 +27,8 @@ Lastly, highscores.html is created to show the list of high scores once a player
 
 ## Credits
 
-[Code Validator](https://validator.w3.org/nu/)
-[MDN Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[Code Validator](https://validator.w3.org/nu/),
+[MDN Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript),
 [W3Scools](https://www.w3schools.com/js/default.asp)
 
 
