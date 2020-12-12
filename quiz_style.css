@@ -17,17 +17,9 @@ body {
     border-radius: 5px;
     background-color: paleturquoise;
     color: hotpink;
-    border: purple;
+    border: purple 2px solid;
     font-size: 30px;
     min-width: 80%;
-}
-
-.choice-container:hover {
-    cursor: pointer;
-    border: gold 3px solid; 
-    background-color: pink;
-    color: blue;
-    border-radius: 5px;
 }
 
 .choice-prefix {

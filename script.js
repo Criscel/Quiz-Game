@@ -13,7 +13,7 @@ let availableQuestions = []
 //list of questions
 var questions = [
     {
-        question: 'What is the capital of Australia? 2',
+        question: 'What is the capital of Australia?',
         choice1: 'Sydney',
         choice2: 'Canberra',
         choice3: 'Melbourne',
@@ -21,36 +21,44 @@ var questions = [
         answer: 2,
     },
     {
-        question: 'What is the capital of Australia? 1',
-        choice1: 'Sydney',
-        choice2: 'Canberra',
-        choice3: 'Melbourne',
-        choice4: 'Adelaide',
+        question: 'How long is the average life span of a Samoyed?',
+        choice1: '12 - 14 years',
+        choice2: '5 - 8 years',
+        choice3: '12 - 15 years',
+        choice4: '9 - 15 years',
         answer: 1,
     },
     {
-        question: 'What is the capital of Australia? 3',
-        choice1: 'Sydney',
-        choice2: 'Canberra',
-        choice3: 'Melbourne',
-        choice4: 'Adelaide',
+        question: 'When was the first Harry Potter movie was realeased?',
+        choice1: '10 June 2001',
+        choice2: '18 November 2001',
+        choice3: '29 November 2001',
+        choice4: '15 July 2001',
         answer: 3,
     },
     {
-        question: 'What is the capital of Australia? 1',
-        choice1: 'Sydney',
-        choice2: 'Canberra',
-        choice3: 'Melbourne',
-        choice4: 'Adelaide',
+        question: 'How long is the Great Wall of China?',
+        choice1: '19,898 kilometres',
+        choice2: '13,371 miles',
+        choice3: '17,317 miles',
+        choice4: '21,196 kilometres',
+        answer: 4,
+    },
+    {
+       question: 'What are the three primary colours',
+        choice1: 'Red, Yellow and Blue',
+        choice2: 'Red, Yellow and Green',
+        choice3: 'Yellow, Red and Black',
+        choice4: 'White, Black and Red',
         answer: 1,
     },
     {
-       question: 'What is the capital of Australia? 1',
-        choice1: 'Sydney',
-        choice2: 'Canberra',
-        choice3: 'Melbourne',
-        choice4: 'Adelaide',
-        answer: 1,
+        question: 'In Boolean Algebra, 1 + 1 = ?',
+        choice1: ' 2 ',
+        choice2: ' 0 ',
+        choice3: ' 1 ',
+        choice4: 'None of the above',
+        answer: 3, 
     }
 ]
 
@@ -65,7 +73,8 @@ function updateTimerCountdown() {
     var minutes = Math.floor(time / 60);
     let seconds = Math.floor(time % 60);
 
-    seconds = seconds < 30 ? '0' + seconds : seconds;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
 
     countDownEl.innerHTML = (minutes + ':' + seconds);
     time--;
@@ -96,11 +105,15 @@ function getNewQuestion () {
     }
 
     questionCounter++
+
     progressText.innerText = ('Question ' + questionCounter + ' of ' + numberOfQuestion);
-    progressBarFull.style.width = `${(questionCounter/numberOfQuestion) * 100}%`
+
+    progressBarFull.style.width = `${(questionCounter/numberOfQuestion) * 100}%`;
     
     var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+
     currentQuestion = availableQuestions[questionsIndex]
+
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
